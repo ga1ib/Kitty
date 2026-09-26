@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "npm run build -w server",
     "start": "node dist/server.js",
     "seed": "tsx src/seeds/seed.ts",
     "test": "node --import tsx --test 'src/**/*.test.ts'",
