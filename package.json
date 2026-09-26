@@ -2,12 +2,22 @@
   "name": "kitty-marketplace",
   "version": "1.0.0",
   "private": true,
-  "workspaces": ["client", "server"],
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "dev": "concurrently -k -n client,server -c cyan,green \"npm run dev -w client\" \"npm run dev -w server\"",
     "build": "npm run build -w server && npm run build -w client",
     "lint": "npm run lint -w client && npm run lint -w server",
     "seed": "npm run seed -w server"
   },
-  "devDependencies": { "concurrently": "^9.1.2", "prettier": "^3.5.3" }
+  "dependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "~5.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.3"
+  }
 }
